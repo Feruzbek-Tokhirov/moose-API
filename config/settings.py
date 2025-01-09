@@ -19,7 +19,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-84l!-jwpq6a4l))e0x^ajwy%!4(!bfol--450ft5t!45gpj7zf'
+SECRET_KEY = 'django-insecure-09ts#rwa#@ql7qady*ystwu=oh)23%le+pkv3681z!9@fzv73('
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,11 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # packages
-    "rest_framework",
-    "drf_yasg",
+    'rest_framework',
+    'drf_yasg',
 
-    # local apps
-    "blog",
+    # local app
+    'blog',
 ]
 
 MIDDLEWARE = [
@@ -105,9 +105,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us-uz'
+LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'Asia/Tashkent'
+TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
@@ -117,13 +117,18 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR / "staticfiles"
-STATICFILES_DIRS = [BASE_DIR / "static"]
+STATICFILES_DIR = [BASE_DIR / 'static']
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
-MEDIA_URL = "media/"
-MEDIA_ROOT = BASE_DIR / "media"
+MEDIA_URL = 'media/'
+MEDIA_ROOT = BASE_DIR / 'media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# REST_FRAMEWORK = {
+#     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+#     'PAGE_SIZE': 1
+# }
